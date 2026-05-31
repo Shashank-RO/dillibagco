@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DilliBagCo Mobile — Option C</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900&family=DM+Sans:wght@400;500;600&display=swap");
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#f7f2e4;font-family:"DM Sans",sans-serif;max-width:390px;margin:0 auto;}
+.btn-r{background:#C93638;color:#f7f2e4;border:none;padding:11px 22px;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
+.btn-o{background:transparent;color:#C93638;border:1.5px solid #C93638;padding:7px 14px;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:600;cursor:pointer;}
+.pc{background:#fffdf6;border:0.5px solid rgba(201,54,56,0.18);border-radius:12px;overflow:hidden;}
+.br{background:#C93638;color:#f7f2e4;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
+.by{background:#FED794;color:#7a4a00;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
+@keyframes marquee{0%{transform:translateX(390px)}100%{transform:translateX(-100%)}}
+.marquee-track{display:inline-block;animation:marquee 18s linear infinite;}
+/* horizontal scroll strip */
+.scroll-strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}
+.scroll-strip::-webkit-scrollbar{display:none;}
+.scroll-card{min-width:180px;flex-shrink:0;}
+</style>
+</head>
+<body>
+
+<!-- Label -->
+<div style="background:#1a1008;padding:6px;text-align:center;">
+  <span style="color:#FED794;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Option C — Full-Screen Hero + Horizontal Scroll</span>
+</div>
+
+<!-- Announcement bar -->
+<div style="background:#C93638;padding:6px;overflow:hidden;white-space:nowrap;">
+  <span class="marquee-track" style="color:#f7f2e4;font-size:10px;font-weight:500;">
+    Free shipping across India &nbsp;&bull;&nbsp; COD available &nbsp;&bull;&nbsp; Easy 7-day returns &nbsp;&bull;&nbsp; Use code <strong>NEW10</strong> for 10% off &nbsp;&bull;&nbsp;
+  </span>
+</div>
+
+<!-- Header — minimal, overlaid on hero -->
+<div style="background:transparent;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10;margin-bottom:-52px;">
+  <i class="ti ti-menu-2" style="font-size:20px;color:#f7f2e4;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.4));"></i>
+  <a href="#"><img src="DilliBagCo Logo w:o bg.png" alt="DilliBagCo" style="height:38px;object-fit:contain;display:block;filter:brightness(0) invert(1);" /></a>
+  <div style="display:flex;gap:12px;align-items:center;">
+    <i class="ti ti-search" style="font-size:18px;color:#f7f2e4;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.4));"></i>
+    <div style="position:relative;">
+      <i class="ti ti-shopping-bag" style="font-size:18px;color:#f7f2e4;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.4));"></i>
+      <span style="position:absolute;top:-4px;right:-4px;background:#FED794;color:#7a4a00;font-size:8px;font-weight:700;width:13px;height:13px;border-radius:50%;display:flex;align-items:center;justify-content:center;">2</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hero — full-screen height, all text overlaid -->
+<div style="position:relative;">
+  <img src="Banner.png" alt="Banner" style="width:100%;height:480px;object-fit:cover;object-position:center;display:block;" />
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,16,8,0.82) 0%,rgba(26,16,8,0.2) 50%,rgba(0,0,0,0) 100%);"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 16px;">
+    <span class="by" style="font-size:9px;margin-bottom:10px;display:inline-block;">Summer 2025 — New arrivals</span>
+    <h1 style="font-family:'Fraunces',serif;font-size:34px;font-weight:900;line-height:1.0;color:#f7f2e4;margin:0 0 8px;">Max Colour.<br>Modern<br>Homegrown.</h1>
+    <p style="font-size:13px;color:rgba(247,242,228,0.75);margin:0 0 18px;font-style:italic;font-family:'Fraunces',serif;">Find your Dilli vibe.</p>
+    <div style="display:flex;gap:10px;">
+      <button class="btn-r" style="flex:1;">Shop Now</button>
+      <button style="flex:1;background:rgba(247,242,228,0.15);color:#f7f2e4;border:1.5px solid rgba(247,242,228,0.5);padding:11px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;backdrop-filter:blur(4px);">View all</button>
+    </div>
+  </div>
+</div>
+
+<!-- Featured Products — horizontal scroll -->
+<div style="padding:28px 0 24px;">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;padding:0 16px;margin-bottom:16px;">
+    <h2 style="font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#1a1008;">Our bags</h2>
+    <a href="#" style="color:#C93638;font-size:11px;font-weight:600;text-decoration:none;">View all &rarr;</a>
+  </div>
+  <div class="scroll-strip" style="padding:0 16px;">
+
+    <div class="pc scroll-card">
+      <div style="aspect-ratio:4/5;overflow:hidden;position:relative;">
+        <img src="8.png" alt="Sunshine Stripe Tote" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        <span class="br" style="position:absolute;top:8px;left:8px;font-size:9px;">Bestseller</span>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:9px;color:#9a8a78;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Tote Bag</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:#1a1008;margin:0 0 6px;">Sunshine Stripe Tote</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:13px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;6,500</span>
+          <button class="btn-o" style="padding:5px 10px;font-size:10px;">Shop</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc scroll-card">
+      <div style="aspect-ratio:4/5;overflow:hidden;position:relative;">
+        <img src="6.png" alt="Mughal Garden Tote" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        <span class="by" style="position:absolute;top:8px;left:8px;font-size:9px;">New in</span>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:9px;color:#9a8a78;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Tote Bag</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:#1a1008;margin:0 0 6px;">Mughal Garden Tote</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:13px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;7,800</span>
+          <button class="btn-o" style="padding:5px 10px;font-size:10px;">Shop</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc scroll-card">
+      <div style="aspect-ratio:4/5;overflow:hidden;position:relative;">
+        <img src="4.png" alt="Madras Quilt Shopper" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:9px;color:#9a8a78;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Shopper</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:#1a1008;margin:0 0 6px;">Madras Quilt Shopper</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:13px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;5,900</span>
+          <button class="btn-o" style="padding:5px 10px;font-size:10px;">Shop</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Brand Story -->
+<div style="background:#C93638;padding:28px 16px;">
+  <span class="by" style="margin-bottom:10px;display:inline-block;">Our story</span>
+  <h2 style="font-family:'Fraunces',serif;font-size:24px;font-weight:900;color:#f7f2e4;margin:10px 0 10px;line-height:1.1;">Crafted by hand.<br>Carried for life.</h2>
+  <p style="color:#f5d5d5;font-size:12px;line-height:1.8;margin:0 0 16px;">Made in the lanes of Delhi by skilled artisan hands. Slow fashion, fair wages, bags that outlast trends.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
+    <div style="background:#FA855A;border-radius:8px;padding:14px;text-align:center;"><div style="font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:#f7f2e4;">50+</div><div style="font-size:10px;color:#f5d5d5;margin-top:2px;">Artisan families</div></div>
+    <div style="background:#FED794;border-radius:8px;padding:14px;text-align:center;"><div style="font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:#7a4a00;">100%</div><div style="font-size:10px;color:#9a6a20;margin-top:2px;">Made in Delhi</div></div>
+    <div style="background:#FED794;border-radius:8px;padding:14px;text-align:center;"><div style="font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:#7a4a00;">5K+</div><div style="font-size:10px;color:#9a6a20;margin-top:2px;">Happy customers</div></div>
+    <div style="background:#FA855A;border-radius:8px;padding:14px;text-align:center;"><div style="font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:#f7f2e4;">Zero</div><div style="font-size:10px;color:#f5d5d5;margin-top:2px;">Fast fashion</div></div>
+  </div>
+  <button style="background:#f7f2e4;color:#C93638;border:none;padding:10px 20px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;width:100%;">Meet the makers</button>
+</div>
+
+<!-- Footer -->
+<div style="background:#1a1008;padding:24px 16px;">
+  <img src="DilliBagCo Logo vector.svg" alt="DilliBagCo" style="height:22px;object-fit:contain;margin-bottom:10px;display:block;filter:invert(55%) sepia(12%) saturate(420%) hue-rotate(348deg) brightness(92%) contrast(85%);" />
+  <p style="color:#9a8a78;font-size:11px;line-height:1.7;margin:0 0 12px;">Crafted by hand. Carried for life.</p>
+  <div style="display:flex;gap:10px;margin-bottom:20px;">
+    <i class="ti ti-brand-instagram" style="font-size:18px;color:#9a8a78;"></i>
+    <i class="ti ti-brand-pinterest" style="font-size:18px;color:#9a8a78;"></i>
+    <i class="ti ti-brand-whatsapp" style="font-size:18px;color:#9a8a78;"></i>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+    <div>
+      <p style="color:#f7f2e4;font-size:11px;font-weight:600;margin:0 0 8px;">Shop</p>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <a href="#" style="color:#9a8a78;font-size:10px;text-decoration:none;">New arrivals</a>
+        <a href="#" style="color:#9a8a78;font-size:10px;text-decoration:none;">Tote bags</a>
+        <a href="#" style="color:#9a8a78;font-size:10px;text-decoration:none;">Shoppers</a>
+      </div>
+    </div>
+    <div>
+      <p style="color:#f7f2e4;font-size:11px;font-weight:600;margin:0 0 8px;">Help</p>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <a href="#" style="color:#9a8a78;font-size:10px;text-decoration:none;">Shipping &amp; returns</a>
+        <a href="#" style="color:#9a8a78;font-size:10px;text-decoration:none;">FAQs</a>
+        <a href="#" style="color:#9a8a78;font-size:10px;text-decoration:none;">Contact us</a>
+      </div>
+    </div>
+  </div>
+  <div style="margin-bottom:16px;">
+    <p style="color:#f7f2e4;font-size:11px;font-weight:600;margin:0 0 8px;">Stay in touch</p>
+    <div style="display:flex;gap:6px;">
+      <input type="email" placeholder="Your email" style="flex:1;background:#2a2018;border:0.5px solid #3a3028;color:#f7f2e4;padding:8px 10px;border-radius:5px;font-size:11px;" />
+      <button style="background:#C93638;color:#f7f2e4;border:none;padding:8px 12px;border-radius:5px;font-size:11px;font-weight:600;cursor:pointer;">Go</button>
+    </div>
+  </div>
+  <div style="border-top:0.5px solid #2a2018;padding-top:12px;text-align:center;">
+    <p style="color:#5a4a38;font-size:9px;">&copy; 2025 DilliBagCo. Made with love in Delhi.</p>
+  </div>
+</div>
+
+</body>
+</html>
