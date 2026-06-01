@@ -10,29 +10,29 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
 .wrap{max-width:1280px;margin:0 auto;padding:0 28px;}
-.btn-r{background:#C93638;color:#f7f2e4;border:none;padding:11px 26px;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
-.btn-o{background:transparent;color:#C93638;border:1.5px solid #C93638;padding:8px 16px;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:600;cursor:pointer;}
-.pc{background:#fffdf6;border:0.5px solid rgba(201,54,56,0.18);border-radius:12px;overflow:hidden;}
-.br{background:#C93638;color:#f7f2e4;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
+.btn-r{background:#d84a38;color:#f7f2e4;border:none;padding:11px 26px;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
+.btn-o{background:transparent;color:#d84a38;border:1.5px solid #d84a38;padding:8px 16px;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:600;cursor:pointer;}
+.pc{background:#fffdf6;border:0.5px solid rgba(216,74,56,0.18);border-radius:12px;overflow:hidden;}
+.br{background:#d84a38;color:#f7f2e4;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
 .by{background:#FED794;color:#7a4a00;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
 
 /* accordion */
-.acc-item{border-bottom:0.5px solid rgba(201,54,56,0.18);}
+.acc-item{border-bottom:0.5px solid rgba(216,74,56,0.18);}
 .acc-trigger{width:100%;background:none;border:none;padding:14px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;color:#1a1008;}
-.acc-trigger .icon{font-size:16px;color:#C93638;transition:transform 0.2s;}
+.acc-trigger .icon{font-size:16px;color:#d84a38;transition:transform 0.2s;}
 .acc-body{display:none;padding:0 0 14px;}
 .acc-item.open .acc-body{display:block;}
 .acc-item.open .icon{transform:rotate(45deg);}
 
 /* thumbnail */
 .thumb{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1.5px solid transparent;cursor:pointer;}
-.thumb.active{border-color:#C93638;}
+.thumb.active{border-color:#d84a38;}
 </style>
 </head>
 <body>
 
 <!-- Announcement bar -->
-<div style="background:#C93638;padding:7px;overflow:hidden;white-space:nowrap;">
+<div style="background:#d84a38;padding:7px;overflow:hidden;white-space:nowrap;">
   <style>
     @keyframes marquee{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
     .marquee-track{display:inline-block;animation:marquee 22s linear infinite;}
@@ -44,14 +44,14 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
 </div>
 
 <!-- Header -->
-<div style="background:#f7f2e4;border-bottom:0.5px solid rgba(201,54,56,0.2);">
+<div style="background:#f7f2e4;border-bottom:0.5px solid rgba(216,74,56,0.2);">
   <div class="wrap" style="display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-top:12px;padding-bottom:12px;">
     <div style="display:flex;gap:20px;">
       <a href="#" style="color:#3a2e22;font-size:13px;font-weight:500;text-decoration:none;">Shop</a>
       <a href="#" style="color:#3a2e22;font-size:13px;font-weight:500;text-decoration:none;">Collections</a>
       <a href="#" style="color:#3a2e22;font-size:13px;font-weight:500;text-decoration:none;">About</a>
     </div>
-    <a href="01_homepage.html"><img src="DilliBagCo Logo w:o bg.png" alt="DilliBagCo" style="height:60px;object-fit:contain;display:block;" /></a>
+    <a href="01_homepage.html"><img src="DilliBagCo Logo vector.svg" alt="DilliBagCo" style="height:60px;display:block;filter:invert(40%) sepia(60%) saturate(600%) hue-rotate(322deg) brightness(95%) contrast(90%);" /></a>
     <div style="display:flex;gap:14px;align-items:center;justify-content:flex-end;">
       <i class="ti ti-search" style="font-size:17px;color:#3a2e22;" aria-hidden="true"></i>
       <i class="ti ti-heart" style="font-size:17px;color:#3a2e22;" aria-hidden="true"></i>
@@ -77,7 +77,7 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
   <!-- Left: gallery -->
   <div>
     <!-- Main image -->
-    <div style="background:#fffdf6;border:0.5px solid rgba(201,54,56,0.15);border-radius:14px;overflow:hidden;position:relative;margin-bottom:12px;">
+    <div style="background:#fffdf6;border:0.5px solid rgba(216,74,56,0.15);border-radius:14px;overflow:hidden;position:relative;margin-bottom:12px;">
       <img id="main-img" src="8.png" alt="The Sunshine Stripe Tote" style="width:100%;height:480px;object-fit:cover;display:block;" />
       <span class="br" style="position:absolute;top:14px;left:14px;">Bestseller</span>
     </div>
@@ -113,7 +113,7 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
     <div style="margin-bottom:22px;">
       <p style="font-size:12px;font-weight:600;color:#1a1008;margin-bottom:10px;">Colour: <span style="font-weight:400;color:#7a6a58;">Sunshine Yellow</span></p>
       <div style="display:flex;gap:8px;">
-        <div style="width:28px;height:28px;border-radius:50%;background:#FED794;border:2px solid #C93638;cursor:pointer;" title="Sunshine Yellow"></div>
+        <div style="width:28px;height:28px;border-radius:50%;background:#FED794;border:2px solid #d84a38;cursor:pointer;" title="Sunshine Yellow"></div>
         <div style="width:28px;height:28px;border-radius:50%;background:#FA855A;border:1.5px solid transparent;cursor:pointer;" title="Coral"></div>
         <div style="width:28px;height:28px;border-radius:50%;background:#4a7c59;border:1.5px solid transparent;cursor:pointer;" title="Forest Green"></div>
         <div style="width:28px;height:28px;border-radius:50%;background:#7a5c9a;border:1.5px solid transparent;cursor:pointer;" title="Plum"></div>
@@ -124,9 +124,9 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
     <div style="margin-bottom:28px;">
       <p style="font-size:12px;font-weight:600;color:#1a1008;margin-bottom:10px;">Size: <span style="font-weight:400;color:#7a6a58;">Medium</span></p>
       <div style="display:flex;gap:8px;">
-        <button onclick="selectSize(this)" style="padding:7px 16px;border-radius:6px;border:1.5px solid rgba(201,54,56,0.3);background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#7a6a58;cursor:pointer;">Small</button>
-        <button onclick="selectSize(this)" style="padding:7px 16px;border-radius:6px;border:1.5px solid #C93638;background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#C93638;cursor:pointer;">Medium</button>
-        <button onclick="selectSize(this)" style="padding:7px 16px;border-radius:6px;border:1.5px solid rgba(201,54,56,0.3);background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#7a6a58;cursor:pointer;">Large</button>
+        <button onclick="selectSize(this)" style="padding:7px 16px;border-radius:6px;border:1.5px solid rgba(216,74,56,0.3);background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#7a6a58;cursor:pointer;">Small</button>
+        <button onclick="selectSize(this)" style="padding:7px 16px;border-radius:6px;border:1.5px solid #d84a38;background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;color:#d84a38;cursor:pointer;">Medium</button>
+        <button onclick="selectSize(this)" style="padding:7px 16px;border-radius:6px;border:1.5px solid rgba(216,74,56,0.3);background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#7a6a58;cursor:pointer;">Large</button>
       </div>
     </div>
 
@@ -135,11 +135,11 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
       <button class="btn-r" style="flex:1;padding:14px;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px;">
         <i class="ti ti-shopping-bag" style="font-size:16px;"></i> Add to Bag
       </button>
-      <button style="background:#fffdf6;color:#C93638;border:1.5px solid rgba(201,54,56,0.3);padding:14px 18px;border-radius:6px;cursor:pointer;">
-        <i class="ti ti-heart" style="font-size:18px;color:#C93638;"></i>
+      <button style="background:#fffdf6;color:#d84a38;border:1.5px solid rgba(216,74,56,0.3);padding:14px 18px;border-radius:6px;cursor:pointer;">
+        <i class="ti ti-heart" style="font-size:18px;color:#d84a38;"></i>
       </button>
     </div>
-    <button style="width:100%;padding:13px;background:transparent;border:1.5px solid #C93638;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#C93638;cursor:pointer;margin-bottom:24px;">Buy it now</button>
+    <button style="width:100%;padding:13px;background:transparent;border:1.5px solid #d84a38;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#d84a38;cursor:pointer;margin-bottom:24px;">Buy it now</button>
 
     <!-- Trust badges -->
     <div style="display:flex;gap:18px;margin-bottom:28px;flex-wrap:wrap;">
@@ -158,7 +158,7 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
     </div>
 
     <!-- Accordion -->
-    <div style="border-top:0.5px solid rgba(201,54,56,0.18);">
+    <div style="border-top:0.5px solid rgba(216,74,56,0.18);">
       <div class="acc-item open">
         <button class="acc-trigger" onclick="toggleAcc(this)">
           <span>Materials &amp; Craft</span>
@@ -216,7 +216,7 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
         <h2 style="font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:#1a1008;margin:0 0 4px;">You may also like</h2>
         <p style="color:#7a6a58;font-size:13px;margin:0;">More handcrafted beauties from Delhi.</p>
       </div>
-      <a href="#" style="color:#C93638;font-size:12px;font-weight:600;text-decoration:none;">View all &rarr;</a>
+      <a href="#" style="color:#d84a38;font-size:12px;font-weight:600;text-decoration:none;">View all &rarr;</a>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
 
@@ -306,7 +306,7 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;}
     <p style="color:#9a8a78;font-size:11px;margin:0 0 10px;line-height:1.7;">New drops and Dilli vibes.</p>
     <div style="display:flex;gap:6px;">
       <input type="email" placeholder="Your email" style="flex:1;background:#2a2018;border:0.5px solid #3a3028;color:#f7f2e4;padding:7px 9px;border-radius:5px;font-size:11px;" />
-      <button style="background:#C93638;color:#f7f2e4;border:none;padding:7px 10px;border-radius:5px;font-size:11px;font-weight:600;cursor:pointer;">Go</button>
+      <button style="background:#d84a38;color:#f7f2e4;border:none;padding:7px 10px;border-radius:5px;font-size:11px;font-weight:600;cursor:pointer;">Go</button>
     </div>
   </div>
 </div>
@@ -330,12 +330,12 @@ function toggleAcc(btn) {
 }
 function selectSize(btn) {
   btn.closest('div').querySelectorAll('button').forEach(b => {
-    b.style.borderColor = 'rgba(201,54,56,0.3)';
+    b.style.borderColor = 'rgba(216,74,56,0.3)';
     b.style.color = '#7a6a58';
     b.style.fontWeight = '500';
   });
-  btn.style.borderColor = '#C93638';
-  btn.style.color = '#C93638';
+  btn.style.borderColor = '#d84a38';
+  btn.style.color = '#d84a38';
   btn.style.fontWeight = '600';
 }
 </script>
