@@ -20,7 +20,6 @@ Handcrafted bag brand from Delhi. These are HTML mockups being built before conv
 |------|-------------|
 | [mobile_A.html](mobile_A.html) | Clean Stack — 2-col grid + horizontal thumbnail |
 | [mobile_B.html](mobile_B.html) | Bold Hero + Single Column cards |
-| [mobile_C.html](mobile_C.html) | Full-Screen Hero + Horizontal Scroll strip |
 
 ## Design System
 
