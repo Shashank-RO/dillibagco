@@ -14,7 +14,7 @@ Handcrafted bag brand from Delhi. These are HTML mockups being built before conv
 | 04_about_page.html | Brand story + artisans | 🔲 Todo |
 | 05_contact_page.html | Contact form + store info | 🔲 Todo |
 
-## Mobile Options
+## Mobile Pages
 
 | File | Description |
 |------|-------------|
