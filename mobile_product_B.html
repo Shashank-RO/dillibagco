@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mobile Product — Option B</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900&family=DM+Sans:wght@400;500;600&display=swap");
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#f7f2e4;font-family:"DM Sans",sans-serif;max-width:390px;margin:0 auto;padding-bottom:80px;}
+.btn-r{background:#C93638;color:#f7f2e4;border:none;padding:13px;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;cursor:pointer;width:100%;}
+.br{background:#C93638;color:#f7f2e4;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
+.by{background:#FED794;color:#7a4a00;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
+.pc{background:#fffdf6;border:0.5px solid rgba(201,54,56,0.18);border-radius:12px;overflow:hidden;}
+@keyframes marquee{0%{transform:translateX(390px)}100%{transform:translateX(-100%)}}
+.marquee-track{display:inline-block;animation:marquee 18s linear infinite;}
+/* dot indicators */
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(201,54,56,0.25);cursor:pointer;}
+.dot.active{background:#C93638;}
+/* tab */
+.tab-btn{flex:1;padding:10px;background:none;border:none;border-bottom:2px solid transparent;font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;color:#9a8a78;cursor:pointer;}
+.tab-btn.active{color:#C93638;border-bottom-color:#C93638;}
+.tab-panel{display:none;padding:14px 0;}
+.tab-panel.active{display:block;}
+.sticky-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:390px;background:#f7f2e4;border-top:0.5px solid rgba(201,54,56,0.2);padding:12px 16px;z-index:100;}
+</style>
+</head>
+<body>
+
+<!-- Label -->
+<div style="background:#1a1008;padding:6px;text-align:center;">
+  <span style="color:#FED794;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Mobile Product — Option B — Swipe Gallery + Tabs</span>
+</div>
+
+<!-- Announcement -->
+<div style="background:#C93638;padding:6px;overflow:hidden;white-space:nowrap;">
+  <span class="marquee-track" style="color:#f7f2e4;font-size:10px;font-weight:500;">
+    Free shipping across India &nbsp;&bull;&nbsp; COD available &nbsp;&bull;&nbsp; Easy 7-day returns &nbsp;&bull;&nbsp; Use code <strong>NEW10</strong> for 10% off &nbsp;&bull;&nbsp;
+  </span>
+</div>
+
+<!-- Header -->
+<div style="background:#f7f2e4;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:0.5px solid rgba(201,54,56,0.2);">
+  <i class="ti ti-arrow-left" style="font-size:20px;color:#3a2e22;"></i>
+  <a href="#"><img src="DilliBagCo Logo w:o bg.png" alt="DilliBagCo" style="height:36px;object-fit:contain;display:block;" /></a>
+  <div style="display:flex;gap:12px;">
+    <i class="ti ti-heart" style="font-size:18px;color:#3a2e22;"></i>
+    <i class="ti ti-shopping-bag" style="font-size:18px;color:#3a2e22;"></i>
+  </div>
+</div>
+
+<!-- Swipe image gallery (visual mock) -->
+<div style="position:relative;background:#fffdf6;">
+  <img src="8.png" alt="Product" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;" />
+  <span class="br" style="position:absolute;top:12px;left:12px;">Bestseller</span>
+  <button style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:rgba(255,253,246,0.85);border:none;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+    <i class="ti ti-chevron-left" style="font-size:16px;color:#1a1008;"></i>
+  </button>
+  <button style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:rgba(255,253,246,0.85);border:none;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;">
+    <i class="ti ti-chevron-right" style="font-size:16px;color:#1a1008;"></i>
+  </button>
+  <!-- Dot indicators -->
+  <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:5px;">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<!-- Product info -->
+<div style="padding:16px;background:#f7f2e4;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px;">
+    <div>
+      <p style="font-size:9px;color:#9a8a78;font-weight:500;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:3px;">Tote Bag</p>
+      <h1 style="font-family:'Fraunces',serif;font-size:22px;font-weight:900;color:#1a1008;line-height:1.1;">The Sunshine<br>Stripe Tote</h1>
+    </div>
+    <div style="text-align:right;">
+      <span style="font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#1a1008;display:block;">&#x20B9;6,500</span>
+      <span style="font-size:10px;color:#9a8a78;text-decoration:line-through;">&#x20B9;8,000</span>
+    </div>
+  </div>
+
+  <div style="display:flex;align-items:center;gap:6px;margin-bottom:16px;">
+    <span style="color:#FA855A;font-size:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span style="font-size:10px;color:#7a6a58;">4.9 · 128 reviews</span>
+    <span class="by" style="font-size:9px;margin-left:4px;">Save &#x20B9;1,500</span>
+  </div>
+
+  <!-- Colour -->
+  <p style="font-size:11px;font-weight:600;color:#1a1008;margin-bottom:8px;">Colour: <span style="font-weight:400;color:#7a6a58;">Sunshine Yellow</span></p>
+  <div style="display:flex;gap:8px;margin-bottom:16px;">
+    <div style="width:24px;height:24px;border-radius:50%;background:#FED794;border:2px solid #C93638;cursor:pointer;"></div>
+    <div style="width:24px;height:24px;border-radius:50%;background:#FA855A;border:1.5px solid transparent;cursor:pointer;"></div>
+    <div style="width:24px;height:24px;border-radius:50%;background:#4a7c59;border:1.5px solid transparent;cursor:pointer;"></div>
+    <div style="width:24px;height:24px;border-radius:50%;background:#7a5c9a;border:1.5px solid transparent;cursor:pointer;"></div>
+  </div>
+
+  <!-- Size -->
+  <p style="font-size:11px;font-weight:600;color:#1a1008;margin-bottom:8px;">Size</p>
+  <div style="display:flex;gap:8px;margin-bottom:18px;">
+    <button style="padding:8px 0;width:72px;border-radius:6px;border:1.5px solid rgba(201,54,56,0.3);background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:11px;color:#7a6a58;cursor:pointer;">Small</button>
+    <button style="padding:8px 0;width:72px;border-radius:6px;border:1.5px solid #C93638;background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;color:#C93638;cursor:pointer;">Medium</button>
+    <button style="padding:8px 0;width:72px;border-radius:6px;border:1.5px solid rgba(201,54,56,0.3);background:#fffdf6;font-family:'DM Sans',sans-serif;font-size:11px;color:#7a6a58;cursor:pointer;">Large</button>
+  </div>
+
+  <!-- Tabs for product details -->
+  <div style="border-top:0.5px solid rgba(201,54,56,0.18);padding-top:4px;">
+    <div style="display:flex;margin-bottom:0;">
+      <button class="tab-btn active" onclick="switchTab(this,'details')">Details</button>
+      <button class="tab-btn" onclick="switchTab(this,'dimensions')">Dimensions</button>
+      <button class="tab-btn" onclick="switchTab(this,'care')">Care</button>
+    </div>
+    <div id="details" class="tab-panel active">
+      <ul style="font-size:12px;color:#5a4a38;line-height:2;padding-left:16px;">
+        <li>Handwoven striped cotton canvas</li>
+        <li>Vegetable-tanned leather handles, 60cm drop</li>
+        <li>100% cotton muslin lining with zip pocket</li>
+        <li>Antique brass hardware</li>
+        <li>Made in Chandni Chowk, Delhi</li>
+      </ul>
+    </div>
+    <div id="dimensions" class="tab-panel">
+      <ul style="font-size:12px;color:#5a4a38;line-height:2;padding-left:16px;">
+        <li>Width: 38cm</li>
+        <li>Height: 32cm</li>
+        <li>Depth: 12cm</li>
+        <li>Handle drop: 60cm</li>
+        <li>Weight: ~480g</li>
+      </ul>
+    </div>
+    <div id="care" class="tab-panel">
+      <ul style="font-size:12px;color:#5a4a38;line-height:2;padding-left:16px;">
+        <li>Spot-clean with damp cloth only</li>
+        <li>Do not machine wash</li>
+        <li>Condition leather handles monthly</li>
+        <li>Store stuffed with tissue</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- You may also like -->
+  <div style="margin-top:24px;">
+    <h2 style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#1a1008;margin-bottom:14px;">You may also like</h2>
+    <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;margin:0 -16px;padding:0 0 4px 0;">
+      <div class="pc" style="min-width:140px;flex-shrink:0;">
+        <div style="aspect-ratio:4/5;overflow:hidden;"><img src="6.png" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div style="padding:8px;">
+          <p style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin-bottom:4px;">Mughal Garden Tote</p>
+          <p style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;7,800</p>
+        </div>
+      </div>
+      <div class="pc" style="min-width:140px;flex-shrink:0;">
+        <div style="aspect-ratio:4/5;overflow:hidden;"><img src="4.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" /></div>
+        <div style="padding:8px;">
+          <p style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin-bottom:4px;">Madras Quilt Shopper</p>
+          <p style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;5,900</p>
+        </div>
+      </div>
+      <div class="pc" style="min-width:140px;flex-shrink:0;">
+        <div style="aspect-ratio:4/5;overflow:hidden;"><img src="1.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div style="padding:8px;">
+          <p style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin-bottom:4px;">Dilli Classic Sling</p>
+          <p style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;4,800</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky CTA -->
+<div class="sticky-bar">
+  <button class="btn-r" style="display:flex;align-items:center;justify-content:center;gap:6px;"><i class="ti ti-shopping-bag" style="font-size:15px;"></i> Add to Bag — &#x20B9;6,500</button>
+</div>
+
+<script>
+function switchTab(btn, id){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
