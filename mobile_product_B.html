@@ -16,8 +16,12 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;max-width:390px;margin:
 @keyframes marquee{0%{transform:translateX(390px)}100%{transform:translateX(-100%)}}
 .marquee-track{display:inline-block;animation:marquee 18s linear infinite;}
 /* dot indicators */
-.dot{width:6px;height:6px;border-radius:50%;background:rgba(216,74,56,0.25);cursor:pointer;}
-.dot.active{background:#d84a38;}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.5);cursor:pointer;}
+.dot.active{background:#ffffff;}
+/* zoom overlay */
+.zoom-overlay{display:none;position:fixed;inset:0;background:rgba(26,16,8,0.95);z-index:200;align-items:center;justify-content:center;}
+.zoom-overlay.open{display:flex;}
+.zoom-overlay img{max-width:100%;max-height:100%;object-fit:contain;}
 /* tab */
 .tab-btn{flex:1;padding:10px;background:none;border:none;border-bottom:2px solid transparent;font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;color:#9a8a78;cursor:pointer;}
 .tab-btn.active{color:#d84a38;border-bottom-color:#d84a38;}
@@ -50,10 +54,20 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;max-width:390px;margin:
   </div>
 </div>
 
-<!-- Swipe image gallery (visual mock) -->
+<!-- Zoom overlay -->
+<div class="zoom-overlay" id="zoom-overlay" onclick="closeZoom()">
+  <img id="zoom-img" src="8.png" alt="Zoomed" />
+  <div style="position:absolute;top:16px;right:16px;color:#f7f2e4;font-size:13px;opacity:0.7;">Tap to close</div>
+</div>
+
+<!-- Swipe image gallery -->
 <div style="position:relative;background:#fffdf6;">
-  <img src="8.png" alt="Product" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;" />
+  <img src="8.png" alt="Product" onclick="openZoom(this.src)" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;cursor:zoom-in;" />
   <span class="br" style="position:absolute;top:12px;left:12px;">Bestseller</span>
+  <div style="position:absolute;top:12px;right:12px;background:rgba(255,253,246,0.85);border-radius:20px;padding:4px 8px;display:flex;align-items:center;gap:4px;">
+    <i class="ti ti-zoom-in" style="font-size:12px;color:#1a1008;"></i>
+    <span style="font-size:10px;color:#1a1008;font-weight:500;">Tap to zoom</span>
+  </div>
   <button style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:rgba(255,253,246,0.85);border:none;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;">
     <i class="ti ti-chevron-left" style="font-size:16px;color:#1a1008;"></i>
   </button>
@@ -61,7 +75,7 @@ body{background:#f7f2e4;font-family:"DM Sans",sans-serif;max-width:390px;margin:
     <i class="ti ti-chevron-right" style="font-size:16px;color:#1a1008;"></i>
   </button>
   <!-- Dot indicators -->
-  <div style="position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:5px;">
+  <div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:5px;">
     <div class="dot active"></div>
     <div class="dot"></div>
     <div class="dot"></div>
@@ -180,6 +194,15 @@ function switchTab(btn, id){
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById(id).classList.add('active');
+}
+function openZoom(src){
+  document.getElementById('zoom-img').src = src;
+  document.getElementById('zoom-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeZoom(){
+  document.getElementById('zoom-overlay').classList.remove('open');
+  document.body.style.overflow = '';
 }
 </script>
 </body>
