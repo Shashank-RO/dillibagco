@@ -11,15 +11,26 @@
 body{background:#f7f2e4;font-family:"DM Sans",sans-serif;min-height:100vh;}
 .wrap{max-width:860px;margin:0 auto;padding:48px 28px;}
 a{text-decoration:none;}
-.card{background:#fffdf6;border:0.5px solid rgba(201,54,56,0.18);border-radius:12px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;transition:border-color 0.15s,box-shadow 0.15s;}
-.card:hover{border-color:#C93638;box-shadow:0 4px 16px rgba(201,54,56,0.1);}
-.badge-done{background:#C93638;color:#f7f2e4;font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px;}
+/* Parent page group card */
+.group{background:#fffdf6;border:0.5px solid rgba(216,74,56,0.18);border-radius:14px;overflow:hidden;margin-bottom:12px;}
+.group-header{padding:18px 22px;display:flex;align-items:center;justify-content:space-between;}
+.group-header h3{font-family:'Fraunces',serif;font-size:17px;font-weight:700;color:#1a1008;}
+/* Sub option rows */
+.sub-row{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;border-top:0.5px solid rgba(216,74,56,0.1);transition:background 0.15s;}
+.sub-row:hover{background:rgba(216,74,56,0.04);}
+.sub-row p{font-size:12px;color:#5a4a38;font-weight:500;}
+.sub-row span.desc{font-size:10px;color:#9a8a78;margin-top:1px;display:block;}
+/* todo row */
+.sub-row.todo{opacity:0.45;cursor:default;}
+.badge-done{background:#d84a38;color:#f7f2e4;font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;}
 .badge-todo{background:#e8e2d8;color:#9a8a78;font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px;}
-.badge-mobile{background:#FED794;color:#7a4a00;font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px;}
+.badge-mobile{background:#FED794;color:#7a4a00;font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;}
+.section-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9a8a78;margin-bottom:12px;margin-top:32px;display:block;}
 </style>
 </head>
 <body>
-<div style="background:#C93638;padding:7px;text-align:center;">
+
+<div style="background:#d84a38;padding:7px;text-align:center;">
   <span style="color:#f7f2e4;font-size:11px;font-weight:500;">DilliBagCo — Design Mockups</span>
 </div>
 
@@ -27,145 +38,149 @@ a{text-decoration:none;}
   <img src="DilliBagCo Logo vector.svg" alt="DilliBagCo" style="height:72px;display:block;margin-bottom:16px;filter:invert(40%) sepia(60%) saturate(600%) hue-rotate(322deg) brightness(95%) contrast(90%);" />
   <p style="font-size:13px;color:#7a6a58;line-height:1.7;margin-bottom:36px;">Website mockups for DilliBagCo</p>
 
-  <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9a8a78;margin-bottom:12px;">Mobile Pages</p>
-  <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
+  <!-- MOBILE PAGES -->
+  <span class="section-label" style="margin-top:0;">Mobile Pages</span>
 
-    <a href="mobile_A.html" class="card">
+  <!-- Mobile > Home Page -->
+  <div class="group">
+    <div class="group-header">
+      <h3>Home Page</h3>
+      <span class="badge-mobile">Mobile</span>
+    </div>
+    <a href="mobile_A.html" class="sub-row" style="display:flex;">
       <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Mobile Homepage — Option A</p>
-        <p style="font-size:11px;color:#7a6a58;">Clean Stack · 2-col grid + thumbnail row</p>
+        <p>Option A</p>
+        <span class="desc">Clean Stack · 2-col grid + thumbnail row</span>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-mobile">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
     </a>
-
-    <a href="mobile_B.html" class="card">
+    <a href="mobile_B.html" class="sub-row" style="display:flex;">
       <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Mobile Homepage — Option B</p>
-        <p style="font-size:11px;color:#7a6a58;">Bold Hero + Single Column cards</p>
+        <p>Option B</p>
+        <span class="desc">Bold Hero + Single Column cards</span>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-mobile">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
     </a>
-
-    <a href="mobile_product_A.html" class="card">
-      <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Mobile Product — Option A</p>
-        <p style="font-size:11px;color:#7a6a58;">Classic Stack · Thumbnail strip · Sticky CTA</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-mobile">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
-    </a>
-
-    <a href="mobile_product_B.html" class="card">
-      <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Mobile Product — Option B</p>
-        <p style="font-size:11px;color:#7a6a58;">Swipe Gallery · Tab details · Wishlist + Add to Bag</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-mobile">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
-    </a>
-
-    <a href="mobile_product_C.html" class="card">
-      <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Mobile Product — Option C</p>
-        <p style="font-size:11px;color:#7a6a58;">Full Image · Side thumbnails · Floating sheet CTA</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-mobile">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
-    </a>
-
   </div>
 
-  <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9a8a78;margin-bottom:12px;">Desktop Pages</p>
-  <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-
-    <a href="homepage_preview.html" class="card">
-      <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Homepage</p>
-        <p style="font-size:11px;color:#7a6a58;">Hero banner · Product grid · Brand story · Footer</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-done">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
-    </a>
-
-    <a href="02_product_page.html" class="card">
-      <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Product Page</p>
-        <p style="font-size:11px;color:#7a6a58;">Gallery · Size selector · Add to bag · Accordion · Related products</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-done">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
-    </a>
-
-    <div class="card" style="opacity:0.5;cursor:default;">
-      <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">About Page</p>
-        <p style="font-size:11px;color:#7a6a58;">Brand story · Artisan section · Values</p>
-      </div>
+  <!-- Mobile > Collections Page -->
+  <div class="group">
+    <div class="group-header">
+      <h3>Collections Page</h3>
       <span class="badge-todo">Todo</span>
     </div>
-
-    <div class="card" style="opacity:0.5;cursor:default;">
+    <div class="sub-row todo" style="display:flex;">
       <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Contact Page</p>
-        <p style="font-size:11px;color:#7a6a58;">Contact form · Store info</p>
+        <p>Options coming soon</p>
+        <span class="desc">Mobile collection grid with filters</span>
       </div>
-      <span class="badge-todo">Todo</span>
     </div>
-
   </div>
 
-  <p style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#9a8a78;margin-bottom:12px;">Collection Pages</p>
-  <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px;">
-
-    <a href="collection_A.html" class="card">
+  <!-- Mobile > Product Page -->
+  <div class="group">
+    <div class="group-header">
+      <h3>Product Page</h3>
+      <span class="badge-mobile">Mobile</span>
+    </div>
+    <a href="mobile_product_A.html" class="sub-row" style="display:flex;">
       <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Collection — Option A</p>
-        <p style="font-size:11px;color:#7a6a58;">Sidebar filters · 3-col grid · Pagination</p>
+        <p>Option A</p>
+        <span class="desc">Classic Stack · Thumbnail strip · Sticky CTA</span>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-done">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
     </a>
-
-    <a href="collection_B.html" class="card">
+    <a href="mobile_product_B.html" class="sub-row" style="display:flex;">
       <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Collection — Option B</p>
-        <p style="font-size:11px;color:#7a6a58;">Top filter chips · Colour swatches · Load more</p>
+        <p>Option B</p>
+        <span class="desc">Swipe Gallery · Tab details · Wishlist + Add to Bag</span>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-done">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
     </a>
-
-    <a href="collection_C.html" class="card">
+    <a href="mobile_product_C.html" class="sub-row" style="display:flex;">
       <div>
-        <p style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:3px;">Collection — Option C</p>
-        <p style="font-size:11px;color:#7a6a58;">Category tabs · Editorial banner · 4-col grid</p>
+        <p>Option C</p>
+        <span class="desc">Full Image · Side thumbnails · Floating sheet CTA</span>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;">
-        <span class="badge-done">In progress</span>
-        <i class="ti ti-arrow-right" style="font-size:16px;color:#d84a38;"></i>
-      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
     </a>
+  </div>
 
+  <!-- DESKTOP PAGES -->
+  <span class="section-label">Desktop Pages</span>
+
+  <!-- Desktop > Home Page -->
+  <div class="group">
+    <div class="group-header">
+      <h3>Home Page</h3>
+      <span class="badge-done">In progress</span>
+    </div>
+    <a href="homepage_preview.html" class="sub-row" style="display:flex;">
+      <div>
+        <p>Option A</p>
+        <span class="desc">Hero banner · Product grid · Brand story · Footer</span>
+      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
+    </a>
+  </div>
+
+  <!-- Desktop > Collections Page -->
+  <div class="group">
+    <div class="group-header">
+      <h3>Collections Page</h3>
+      <span class="badge-done">In progress</span>
+    </div>
+    <a href="collection_A.html" class="sub-row" style="display:flex;">
+      <div>
+        <p>Option A</p>
+        <span class="desc">Sidebar filters · 3-col grid · Pagination</span>
+      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
+    </a>
+    <a href="collection_B.html" class="sub-row" style="display:flex;">
+      <div>
+        <p>Option B</p>
+        <span class="desc">Top filter chips · Colour swatches · Load more</span>
+      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
+    </a>
+    <a href="collection_C.html" class="sub-row" style="display:flex;">
+      <div>
+        <p>Option C</p>
+        <span class="desc">Category tabs · Editorial banner · 4-col grid</span>
+      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
+    </a>
+  </div>
+
+  <!-- Desktop > Product Page -->
+  <div class="group">
+    <div class="group-header">
+      <h3>Product Page</h3>
+      <span class="badge-done">In progress</span>
+    </div>
+    <a href="02_product_page.html" class="sub-row" style="display:flex;">
+      <div>
+        <p>Option A</p>
+        <span class="desc">Gallery · Size selector · Add to bag · Accordion · Related products</span>
+      </div>
+      <i class="ti ti-arrow-right" style="font-size:15px;color:#d84a38;flex-shrink:0;margin-left:12px;"></i>
+    </a>
+  </div>
+
+  <!-- Desktop > About & Contact (todo) -->
+  <div class="group" style="opacity:0.45;">
+    <div class="group-header">
+      <h3>About Page</h3>
+      <span class="badge-todo">Todo</span>
+    </div>
+  </div>
+
+  <div class="group" style="opacity:0.45;">
+    <div class="group-header">
+      <h3>Contact Page</h3>
+      <span class="badge-todo">Todo</span>
+    </div>
   </div>
 
 </div>
