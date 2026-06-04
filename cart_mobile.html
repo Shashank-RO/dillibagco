@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cart — Mobile — DilliBagCo</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900&family=DM+Sans:wght@400;500;600&display=swap");
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#f7f2e4;font-family:"DM Sans",sans-serif;max-width:390px;margin:0 auto;padding-bottom:100px;}
+.by{background:#FED794;color:#7a4a00;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
+.br{background:#d84a38;color:#f7f2e4;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;}
+.pc{background:#fffdf6;border:0.5px solid rgba(216,74,56,0.18);border-radius:12px;overflow:hidden;}
+@keyframes marquee{0%{transform:translateX(390px)}100%{transform:translateX(-100%)}}
+.marquee-track{display:inline-block;animation:marquee 18s linear infinite;}
+.stepper{display:flex;align-items:center;gap:0;border:0.5px solid rgba(216,74,56,0.3);border-radius:6px;overflow:hidden;}
+.stepper button{background:#fffdf6;border:none;width:30px;height:30px;font-size:15px;cursor:pointer;color:#d84a38;font-weight:700;}
+.stepper span{width:30px;text-align:center;font-size:12px;font-weight:600;color:#1a1008;}
+.sticky-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:390px;background:#fffdf6;border-top:0.5px solid rgba(216,74,56,0.2);border-radius:16px 16px 0 0;padding:16px;box-shadow:0 -4px 20px rgba(0,0,0,0.08);z-index:100;}
+</style>
+</head>
+<body>
+
+<!-- Label -->
+<div style="background:#1a1008;padding:6px;text-align:center;">
+  <span style="color:#FED794;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Mobile Cart</span>
+</div>
+
+<!-- Announcement -->
+<div style="background:#d84a38;padding:6px;overflow:hidden;white-space:nowrap;">
+  <span class="marquee-track" style="color:#f7f2e4;font-size:10px;font-weight:500;">
+    Free shipping across India &nbsp;&bull;&nbsp; COD available &nbsp;&bull;&nbsp; Easy 7-day returns &nbsp;&bull;&nbsp; Use code <strong>NEW10</strong> for 10% off &nbsp;&bull;&nbsp;
+  </span>
+</div>
+
+<!-- Header -->
+<div style="background:#f7f2e4;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:0.5px solid rgba(216,74,56,0.2);">
+  <i class="ti ti-arrow-left" style="font-size:20px;color:#3a2e22;"></i>
+  <a href="#"><img src="DilliBagCo Logo vector.svg" alt="DilliBagCo" style="height:36px;display:block;filter:invert(40%) sepia(60%) saturate(600%) hue-rotate(322deg) brightness(95%) contrast(90%);" /></a>
+  <div style="position:relative;">
+    <i class="ti ti-shopping-bag" style="font-size:18px;color:#3a2e22;"></i>
+    <span style="position:absolute;top:-4px;right:-4px;background:#d84a38;color:#fff;font-size:8px;font-weight:700;width:13px;height:13px;border-radius:50%;display:flex;align-items:center;justify-content:center;">3</span>
+  </div>
+</div>
+
+<!-- Cart heading -->
+<div style="padding:20px 16px 10px;">
+  <h1 style="font-family:'Fraunces',serif;font-size:30px;font-weight:900;color:#1a1008;">Cart</h1>
+  <p style="font-size:11px;color:#9a8a78;margin-top:3px;">3 items</p>
+</div>
+
+<!-- Cart items -->
+<div style="padding:0 16px;display:flex;flex-direction:column;gap:12px;">
+
+  <!-- Item 1 -->
+  <div style="background:#fffdf6;border:0.5px solid rgba(216,74,56,0.15);border-radius:12px;padding:12px;display:flex;gap:12px;align-items:center;">
+    <div style="width:72px;height:72px;border-radius:8px;overflow:hidden;flex-shrink:0;">
+      <img src="8.png" style="width:100%;height:100%;object-fit:cover;" />
+    </div>
+    <div style="flex:1;min-width:0;">
+      <p style="font-size:9px;color:#9a8a78;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Tote Bag</p>
+      <p style="font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:#1a1008;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Sunshine Stripe Tote</p>
+      <p style="font-size:10px;color:#7a6a58;margin-bottom:8px;">Yellow · M</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="stepper">
+          <button>−</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <span style="font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:#1a1008;">&#x20B9;6,500</span>
+      </div>
+    </div>
+    <button style="background:none;border:none;cursor:pointer;align-self:flex-start;padding:2px;">
+      <i class="ti ti-x" style="font-size:15px;color:#9a8a78;"></i>
+    </button>
+  </div>
+
+  <!-- Item 2 -->
+  <div style="background:#fffdf6;border:0.5px solid rgba(216,74,56,0.15);border-radius:12px;padding:12px;display:flex;gap:12px;align-items:center;">
+    <div style="width:72px;height:72px;border-radius:8px;overflow:hidden;flex-shrink:0;">
+      <img src="6.png" style="width:100%;height:100%;object-fit:cover;" />
+    </div>
+    <div style="flex:1;min-width:0;">
+      <p style="font-size:9px;color:#9a8a78;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Tote Bag</p>
+      <p style="font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:#1a1008;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Mughal Garden Tote</p>
+      <p style="font-size:10px;color:#7a6a58;margin-bottom:8px;">Plum · M</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="stepper">
+          <button>−</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <span style="font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:#1a1008;">&#x20B9;7,800</span>
+      </div>
+    </div>
+    <button style="background:none;border:none;cursor:pointer;align-self:flex-start;padding:2px;">
+      <i class="ti ti-x" style="font-size:15px;color:#9a8a78;"></i>
+    </button>
+  </div>
+
+  <!-- Item 3 -->
+  <div style="background:#fffdf6;border:0.5px solid rgba(216,74,56,0.15);border-radius:12px;padding:12px;display:flex;gap:12px;align-items:center;">
+    <div style="width:72px;height:72px;border-radius:8px;overflow:hidden;flex-shrink:0;">
+      <img src="4.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+    </div>
+    <div style="flex:1;min-width:0;">
+      <p style="font-size:9px;color:#9a8a78;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Shopper</p>
+      <p style="font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:#1a1008;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Madras Quilt Shopper</p>
+      <p style="font-size:10px;color:#7a6a58;margin-bottom:8px;">Coral · L</p>
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="stepper">
+          <button>−</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <span style="font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:#1a1008;">&#x20B9;5,900</span>
+      </div>
+    </div>
+    <button style="background:none;border:none;cursor:pointer;align-self:flex-start;padding:2px;">
+      <i class="ti ti-x" style="font-size:15px;color:#9a8a78;"></i>
+    </button>
+  </div>
+
+</div>
+
+<!-- Promo code -->
+<div style="padding:16px;margin-top:4px;">
+  <div style="display:flex;gap:6px;">
+    <input type="text" placeholder="Enter promo code" style="flex:1;background:#fffdf6;border:0.5px solid rgba(216,74,56,0.3);color:#1a1008;padding:10px 12px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;" />
+    <button style="background:#d84a38;color:#f7f2e4;border:none;padding:10px 16px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;">Apply</button>
+  </div>
+</div>
+
+<!-- Order summary -->
+<div style="margin:0 16px;background:#fffdf6;border:0.5px solid rgba(216,74,56,0.15);border-radius:12px;padding:16px;">
+  <h2 style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;margin-bottom:14px;">Order Summary</h2>
+  <div style="display:flex;flex-direction:column;gap:10px;padding-bottom:14px;border-bottom:0.5px solid rgba(216,74,56,0.12);margin-bottom:14px;">
+    <div style="display:flex;justify-content:space-between;">
+      <span style="font-size:12px;color:#5a4a38;">Subtotal (3 items)</span>
+      <span style="font-size:12px;font-weight:600;color:#1a1008;">&#x20B9;20,200</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;">
+      <span style="font-size:12px;color:#5a4a38;">Discount (NEW10)</span>
+      <span style="font-size:12px;font-weight:600;color:#4a7c59;">− &#x20B9;2,020</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;">
+      <span style="font-size:12px;color:#5a4a38;">Delivery</span>
+      <span style="font-size:12px;font-weight:600;color:#4a7c59;">Free</span>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;">
+    <span style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;">Total</span>
+    <span style="font-family:'Fraunces',serif;font-size:18px;font-weight:900;color:#1a1008;">&#x20B9;18,180</span>
+  </div>
+</div>
+
+<!-- Payment methods -->
+<div style="padding:14px 16px 0;">
+  <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;">
+    <span style="font-size:9px;color:#9a8a78;background:#fffdf6;border:0.5px solid rgba(216,74,56,0.2);padding:4px 10px;border-radius:4px;font-weight:600;">UPI</span>
+    <span style="font-size:9px;color:#9a8a78;background:#fffdf6;border:0.5px solid rgba(216,74,56,0.2);padding:4px 10px;border-radius:4px;font-weight:600;">Cards</span>
+    <span style="font-size:9px;color:#9a8a78;background:#fffdf6;border:0.5px solid rgba(216,74,56,0.2);padding:4px 10px;border-radius:4px;font-weight:600;">Net Banking</span>
+    <span style="font-size:9px;color:#9a8a78;background:#fffdf6;border:0.5px solid rgba(216,74,56,0.2);padding:4px 10px;border-radius:4px;font-weight:600;">COD</span>
+  </div>
+</div>
+
+<!-- You might like -->
+<div style="padding:28px 16px 0;">
+  <h2 style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#1a1008;margin-bottom:14px;">You might like</h2>
+  <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;">
+    <div class="pc" style="min-width:140px;flex-shrink:0;">
+      <div style="aspect-ratio:4/5;overflow:hidden;position:relative;">
+        <img src="1.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        <span class="br" style="position:absolute;top:8px;left:8px;font-size:9px;">Limited</span>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin-bottom:6px;">Dilli Classic Sling</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;4,800</span>
+          <button style="background:#d84a38;color:#f7f2e4;border:none;padding:4px 10px;border-radius:5px;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;cursor:pointer;">Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="pc" style="min-width:140px;flex-shrink:0;">
+      <div style="aspect-ratio:4/5;overflow:hidden;">
+        <img src="8.png" style="width:100%;height:100%;object-fit:cover;display:block;filter:hue-rotate(140deg);" />
+      </div>
+      <div style="padding:10px;">
+        <p style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin-bottom:6px;">Garden Bloom Tote</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;6,200</span>
+          <button style="background:#d84a38;color:#f7f2e4;border:none;padding:4px 10px;border-radius:5px;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;cursor:pointer;">Add</button>
+        </div>
+      </div>
+    </div>
+    <div class="pc" style="min-width:140px;flex-shrink:0;">
+      <div style="aspect-ratio:4/5;overflow:hidden;position:relative;">
+        <img src="6.png" style="width:100%;height:100%;object-fit:cover;display:block;filter:hue-rotate(260deg);" />
+        <span class="by" style="position:absolute;top:8px;left:8px;font-size:9px;">New in</span>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin-bottom:6px;">Indigo Block Tote</p>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;7,200</span>
+          <button style="background:#d84a38;color:#f7f2e4;border:none;padding:4px 10px;border-radius:5px;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;cursor:pointer;">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky checkout bar -->
+<div class="sticky-bar">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+    <div>
+      <p style="font-size:10px;color:#9a8a78;">Total (3 items)</p>
+      <p style="font-family:'Fraunces',serif;font-size:18px;font-weight:900;color:#1a1008;">&#x20B9;18,180</p>
+    </div>
+    <button style="background:#d84a38;color:#f7f2e4;border:none;padding:13px 24px;border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;">
+      Checkout →
+    </button>
+  </div>
+  <p style="font-size:10px;color:#9a8a78;text-align:center;">
+    <i class="ti ti-shield-check" style="font-size:11px;vertical-align:middle;"></i>
+    &nbsp;Secure checkout · Easy 7-day returns
+  </p>
+</div>
+
+</body>
+</html>
