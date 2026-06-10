@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Collection Mobile — Option B</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900&family=DM+Sans:wght@400;500;600&display=swap");
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#f7f2e4;font-family:"DM Sans",sans-serif;max-width:390px;margin:0 auto;}
+.pc{background:#fffdf6;border-radius:10px;overflow:hidden;}
+.br{background:#d84a38;color:#f7f2e4;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;display:inline-block;}
+.by{background:#FED794;color:#7a4a00;font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;display:inline-block;}
+@keyframes marquee{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+.marquee-track{display:inline-block;animation:marquee 20s linear infinite;}
+/* pill category chips */
+.cat-pill{padding:7px 16px;border:1px solid rgba(216,74,56,0.3);background:#f7f2e4;border-radius:20px;font-family:"DM Sans",sans-serif;font-size:11px;font-weight:500;color:#7a6a58;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+.cat-pill.active{background:#d84a38;color:#f7f2e4;border-color:#d84a38;font-weight:600;}
+/* sticky sort+filter bar */
+.sticky-bar{position:sticky;top:0;z-index:100;background:#f7f2e4;border-bottom:0.5px solid rgba(216,74,56,0.15);}
+/* filter bottom sheet */
+#filter-overlay{position:fixed;inset:0;background:rgba(26,16,8,0.4);z-index:200;opacity:0;pointer-events:none;transition:opacity 0.25s;}
+#filter-overlay.open{opacity:1;pointer-events:all;}
+#filter-sheet{position:fixed;bottom:0;left:0;right:0;max-width:390px;margin:0 auto;background:#fffdf6;z-index:201;border-radius:20px 20px 0 0;transform:translateY(100%);transition:transform 0.3s cubic-bezier(.4,0,.2,1);padding:20px 20px 32px;max-height:85vh;overflow-y:auto;}
+#filter-sheet.open{transform:translateY(0);}
+.filter-section{margin-bottom:20px;}
+.filter-section h4{font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:#1a1008;margin-bottom:10px;padding-bottom:7px;border-bottom:0.5px solid rgba(216,74,56,0.15);}
+.filter-chip{display:inline-block;padding:5px 12px;border:0.5px solid rgba(216,74,56,0.3);border-radius:20px;font-size:11px;color:#1a1008;cursor:pointer;margin:0 5px 5px 0;background:#f7f2e4;user-select:none;}
+.filter-chip.sel{background:#d84a38;color:#f7f2e4;border-color:#d84a38;}
+.btn-r{background:#d84a38;color:#f7f2e4;border:none;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:13px;font-weight:600;cursor:pointer;}
+.btn-o{background:transparent;color:#d84a38;border:1.5px solid #d84a38;border-radius:6px;font-family:"DM Sans",sans-serif;font-size:12px;font-weight:600;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<!-- Label -->
+<div style="background:#1a1008;padding:5px;text-align:center;">
+  <span style="color:#FED794;font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Collection Mobile — Option B — Pill Chips + Hero Overlay + Sticky Bar</span>
+</div>
+
+<!-- Announcement -->
+<div style="background:#d84a38;padding:6px;overflow:hidden;white-space:nowrap;">
+  <span class="marquee-track" style="color:#f7f2e4;font-size:10px;font-weight:500;">
+    Free shipping across India &nbsp;&bull;&nbsp; Proudly made in Dilli &nbsp;&bull;&nbsp; COD available &nbsp;&bull;&nbsp; Easy 7-day returns &nbsp;&bull;&nbsp; Use code <strong>NEW10</strong> for 10% off &nbsp;&bull;&nbsp;
+  </span>
+</div>
+
+<!-- Header -->
+<div style="background:#f7f2e4;border-bottom:0.5px solid rgba(216,74,56,0.2);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;">
+  <i class="ti ti-menu-2" style="font-size:20px;color:#3a2e22;"></i>
+  <a href="index.html"><img src="DilliBagCo Logo vector.svg" alt="DilliBagCo" style="height:36px;display:block;filter:invert(40%) sepia(60%) saturate(600%) hue-rotate(322deg) brightness(95%) contrast(90%);" /></a>
+  <div style="display:flex;gap:14px;align-items:center;">
+    <i class="ti ti-search" style="font-size:18px;color:#3a2e22;"></i>
+    <i class="ti ti-shopping-bag" style="font-size:18px;color:#3a2e22;"></i>
+  </div>
+</div>
+
+<!-- Full-width editorial hero with text overlay -->
+<div style="position:relative;">
+  <img src="8.png" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;" />
+  <!-- dark gradient overlay -->
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(26,16,8,0.75) 40%, rgba(26,16,8,0.1) 100%);"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 16px;">
+    <span class="by" style="margin-bottom:8px;display:inline-block;">Summer 2025 Drop</span>
+    <h2 style="font-family:'Fraunces',serif;font-size:24px;font-weight:900;color:#f7f2e4;line-height:1.1;margin-bottom:10px;">Bold colours.<br>Dilli energy.</h2>
+    <button class="btn-r" style="padding:10px 22px;font-size:12px;">Shop the drop</button>
+  </div>
+</div>
+
+<!-- Sticky sort + filter bar -->
+<div class="sticky-bar">
+  <!-- pill chips row -->
+  <div style="display:flex;gap:8px;padding:10px 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+    <button class="cat-pill active">All Bags</button>
+    <button class="cat-pill">Totes</button>
+    <button class="cat-pill">Shoppers</button>
+    <button class="cat-pill">Slings</button>
+    <button class="cat-pill">Clutches</button>
+    <button class="cat-pill">New In</button>
+    <button class="cat-pill">Sale</button>
+  </div>
+  <!-- sort + filter row -->
+  <div style="padding:0 12px 10px;display:flex;align-items:center;justify-content:space-between;">
+    <p style="font-size:11px;color:#7a6a58;"><strong style="color:#1a1008;">24</strong> products</p>
+    <div style="display:flex;gap:8px;">
+      <select style="font-family:'DM Sans',sans-serif;font-size:11px;color:#1a1008;background:#fffdf6;border:0.5px solid rgba(216,74,56,0.3);border-radius:20px;padding:5px 10px;">
+        <option>Featured</option>
+        <option>Newest</option>
+        <option>Price ↑</option>
+        <option>Price ↓</option>
+      </select>
+      <button onclick="openFilter()" style="padding:5px 12px;border:0.5px solid rgba(216,74,56,0.3);background:#fffdf6;border-radius:20px;font-family:'DM Sans',sans-serif;font-size:11px;color:#1a1008;cursor:pointer;display:flex;align-items:center;gap:4px;">
+        <i class="ti ti-adjustments-horizontal" style="font-size:12px;"></i> Filter
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 2-column product grid — slightly taller images -->
+<div style="padding:12px 12px 60px;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+
+    <div class="pc">
+      <div style="aspect-ratio:3/4;overflow:hidden;position:relative;">
+        <img src="8.png" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        <span class="br" style="position:absolute;top:7px;left:7px;">Bestseller</span>
+        <div style="position:absolute;top:7px;right:7px;background:rgba(255,253,246,0.9);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-heart" style="font-size:13px;color:#d84a38;"></i>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:8px;color:#9a8a78;margin:0 0 2px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Tote Bag</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin:0 0 6px;line-height:1.2;">Sunshine Stripe Tote</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;6,500</span>
+          <div style="display:flex;gap:3px;">
+            <div style="width:8px;height:8px;border-radius:50%;background:#FED794;border:1px solid rgba(0,0,0,0.1);"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:#FA855A;border:1px solid rgba(0,0,0,0.1);"></div>
+            <div style="width:8px;height:8px;border-radius:50%;background:#4a7c59;border:1px solid rgba(0,0,0,0.1);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div style="aspect-ratio:3/4;overflow:hidden;position:relative;">
+        <img src="6.png" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        <span class="by" style="position:absolute;top:7px;left:7px;">New in</span>
+        <div style="position:absolute;top:7px;right:7px;background:rgba(255,253,246,0.9);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-heart" style="font-size:13px;color:#d84a38;"></i>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:8px;color:#9a8a78;margin:0 0 2px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Tote Bag</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin:0 0 6px;line-height:1.2;">Mughal Garden Tote</h3>
+        <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;7,800</span>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div style="aspect-ratio:3/4;overflow:hidden;position:relative;">
+        <img src="4.png" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center top;" />
+        <div style="position:absolute;top:7px;right:7px;background:rgba(255,253,246,0.9);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-heart" style="font-size:13px;color:#d84a38;"></i>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:8px;color:#9a8a78;margin:0 0 2px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Shopper</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin:0 0 6px;line-height:1.2;">Madras Quilt Shopper</h3>
+        <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;5,900</span>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div style="aspect-ratio:3/4;overflow:hidden;position:relative;">
+        <img src="1.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;" />
+        <span class="br" style="position:absolute;top:7px;left:7px;">Limited</span>
+        <div style="position:absolute;top:7px;right:7px;background:rgba(255,253,246,0.9);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-heart" style="font-size:13px;color:#d84a38;"></i>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:8px;color:#9a8a78;margin:0 0 2px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Sling Bag</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin:0 0 6px;line-height:1.2;">Dilli Classic Sling</h3>
+        <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;4,800</span>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div style="aspect-ratio:3/4;overflow:hidden;position:relative;">
+        <img src="8.png" style="width:100%;height:100%;object-fit:cover;display:block;filter:hue-rotate(140deg);" />
+        <div style="position:absolute;top:7px;right:7px;background:rgba(255,253,246,0.9);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-heart" style="font-size:13px;color:#d84a38;"></i>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:8px;color:#9a8a78;margin:0 0 2px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Tote Bag</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin:0 0 6px;line-height:1.2;">Garden Bloom Tote</h3>
+        <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;6,200</span>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div style="aspect-ratio:3/4;overflow:hidden;position:relative;">
+        <img src="6.png" style="width:100%;height:100%;object-fit:cover;display:block;filter:hue-rotate(260deg);" />
+        <span class="by" style="position:absolute;top:7px;left:7px;">New in</span>
+        <div style="position:absolute;top:7px;right:7px;background:rgba(255,253,246,0.9);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-heart" style="font-size:13px;color:#d84a38;"></i>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:8px;color:#9a8a78;margin:0 0 2px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Tote Bag</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin:0 0 6px;line-height:1.2;">Indigo Block Tote</h3>
+        <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;7,200</span>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div style="aspect-ratio:3/4;overflow:hidden;position:relative;">
+        <img src="4.png" style="width:100%;height:100%;object-fit:cover;display:block;filter:hue-rotate(200deg);" />
+        <div style="position:absolute;top:7px;right:7px;background:rgba(255,253,246,0.9);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-heart" style="font-size:13px;color:#d84a38;"></i>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:8px;color:#9a8a78;margin:0 0 2px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Shopper</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin:0 0 6px;line-height:1.2;">Rose Weave Shopper</h3>
+        <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;6,800</span>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div style="aspect-ratio:3/4;overflow:hidden;position:relative;">
+        <img src="1.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;filter:hue-rotate(80deg);" />
+        <span class="by" style="position:absolute;top:7px;left:7px;">New in</span>
+        <div style="position:absolute;top:7px;right:7px;background:rgba(255,253,246,0.9);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;">
+          <i class="ti ti-heart" style="font-size:13px;color:#d84a38;"></i>
+        </div>
+      </div>
+      <div style="padding:10px;">
+        <p style="font-size:8px;color:#9a8a78;margin:0 0 2px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;">Sling Bag</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:12px;font-weight:700;color:#1a1008;margin:0 0 6px;line-height:1.2;">Emerald Kantha Sling</h3>
+        <span style="font-size:12px;font-weight:700;color:#1a1008;font-family:'Fraunces',serif;">&#x20B9;5,400</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Load more -->
+  <div style="text-align:center;margin-top:24px;">
+    <button class="btn-r" style="padding:12px 40px;">Load more</button>
+    <p style="font-size:10px;color:#9a8a78;margin-top:8px;">Showing 8 of 24 products</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<div style="background:#1a1008;padding:24px 16px 32px;">
+  <img src="DilliBagCo Logo vector.svg" alt="DilliBagCo" style="height:24px;margin-bottom:10px;display:block;filter:invert(55%) sepia(12%) saturate(420%) hue-rotate(348deg) brightness(92%) contrast(85%);" />
+  <p style="color:#9a8a78;font-size:11px;line-height:1.7;margin-bottom:14px;">Crafted by hand. Carried for life.</p>
+  <div style="display:flex;gap:14px;margin-bottom:20px;">
+    <i class="ti ti-brand-instagram" style="font-size:18px;color:#9a8a78;"></i>
+    <i class="ti ti-brand-pinterest" style="font-size:18px;color:#9a8a78;"></i>
+    <i class="ti ti-brand-whatsapp" style="font-size:18px;color:#9a8a78;"></i>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+    <div>
+      <p style="color:#f7f2e4;font-size:12px;font-weight:600;margin:0 0 8px;">Shop</p>
+      <a href="#" style="display:block;color:#9a8a78;font-size:11px;text-decoration:none;margin-bottom:5px;">New arrivals</a>
+      <a href="#" style="display:block;color:#9a8a78;font-size:11px;text-decoration:none;margin-bottom:5px;">Tote bags</a>
+      <a href="#" style="display:block;color:#9a8a78;font-size:11px;text-decoration:none;">Gift cards</a>
+    </div>
+    <div>
+      <p style="color:#f7f2e4;font-size:12px;font-weight:600;margin:0 0 8px;">Help</p>
+      <a href="#" style="display:block;color:#9a8a78;font-size:11px;text-decoration:none;margin-bottom:5px;">Shipping &amp; returns</a>
+      <a href="#" style="display:block;color:#9a8a78;font-size:11px;text-decoration:none;margin-bottom:5px;">Contact us</a>
+      <a href="#" style="display:block;color:#9a8a78;font-size:11px;text-decoration:none;">Track order</a>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;margin-bottom:16px;">
+    <input type="email" placeholder="Your email" style="flex:1;background:#2a2018;border:0.5px solid #3a3028;color:#f7f2e4;padding:8px 10px;border-radius:5px;font-size:11px;" />
+    <button class="btn-r" style="padding:8px 14px;font-size:11px;">Go</button>
+  </div>
+  <p style="color:#5a4a38;font-size:10px;">&copy; 2026 DilliBagCo. Made with love in Dilli.</p>
+</div>
+
+<!-- Filter overlay + bottom sheet -->
+<div id="filter-overlay" onclick="closeFilter()"></div>
+<div id="filter-sheet">
+  <div style="width:40px;height:4px;background:#d0c8be;border-radius:4px;margin:0 auto 20px;"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+    <span style="font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:#1a1008;">Filters</span>
+    <button onclick="closeFilter()" style="background:none;border:none;cursor:pointer;font-size:18px;color:#7a6a58;">&#x2715;</button>
+  </div>
+
+  <div class="filter-section">
+    <h4>Category</h4>
+    <span class="filter-chip sel" onclick="this.classList.toggle('sel')">All</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Totes</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Slings</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Clutches</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Backpacks</span>
+  </div>
+
+  <div class="filter-section">
+    <h4>Colour</h4>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Natural</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Indigo</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Rust</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Olive</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Black</span>
+  </div>
+
+  <div class="filter-section">
+    <h4>Price</h4>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Under ₹3,000</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">₹3,000 – ₹6,000</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">₹6,000 – ₹10,000</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Above ₹10,000</span>
+  </div>
+
+  <div class="filter-section">
+    <h4>Material</h4>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Jute</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Canvas</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Leather</span>
+    <span class="filter-chip" onclick="this.classList.toggle('sel')">Block Print</span>
+  </div>
+
+  <div style="display:flex;gap:10px;">
+    <button onclick="closeFilter()" class="btn-r" style="flex:1;padding:13px;">Apply</button>
+    <button onclick="closeFilter()" class="btn-o" style="flex:1;padding:13px;">Clear all</button>
+  </div>
+</div>
+
+<script>
+function openFilter(){
+  document.getElementById('filter-overlay').classList.add('open');
+  document.getElementById('filter-sheet').classList.add('open');
+}
+function closeFilter(){
+  document.getElementById('filter-overlay').classList.remove('open');
+  document.getElementById('filter-sheet').classList.remove('open');
+}
+</script>
+</body>
+</html>
